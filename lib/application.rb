@@ -13,19 +13,19 @@ class Application
       puts "█▀▄ █▄█ █▄█ ░█░".center(70).red
       puts
       puts
-      puts "/_\\Pour jouer écrit les cases dans ce format -> A1/B1/..".red
+      puts "⚠️ Pour jouer écrit les cases dans ce format -> A1/B1/..".center(70).red
       puts
     game = Game.new
     count = 1
     while(true)
       game.turn(game.player1)
       count += 1
-      if (game.board.victory? == true) || count >= 9
+      if (game.board.victory?(game.player1) == true) || count > 9
         break
       end
       game.turn(game.player2)
       count += 1
-      if (game.board.victory? == true) || count >= 9
+      if (game.board.victory?(game.player2) == true) || count > 9
         break
       end
     end
