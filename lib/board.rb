@@ -22,7 +22,7 @@ class Board
     #TO DO : une méthode qui :
     #1) demande au bon joueur ce qu'il souhaite faire
     puts
-    puts "Quelle case souhaites-tu jouer #{player.player_name} ?"
+    puts "Quelle case souhaites-tu jouer #{player.player_name} ?".center(70)
     print ">"
     choice = gets.chomp
     #2) change la BoardCase jouée en fonction de la valeur du joueur (X ou O)
@@ -32,92 +32,92 @@ class Board
 
   def victory?(player)
     #TO DO : une méthode qui vérifie le plateau et indique s'il y a un vainqueur ou match nul
-    if @count_turn < 9
+    if @count_turn <= 9
       if (@grid["A1"].include?(" ") == false) && @grid["A1"] == @grid["A2"] && @grid["A1"] == @grid["A3"]
         puts 
-        puts "____    ____  __    ______ .___________.  ______    __  .______       _______ ".yellow
-        puts "\\   \\  /   / |  |  /      ||           | /  __  \\  |  | |   _  \\     |   ____|".yellow
-        puts " \\   \\/   /  |  | |  ,----'`---|  |----`|  |  |  | |  | |  |_)  |    |  |__   ".yellow 
-        puts "  \\      /   |  | |  |         |  |     |  |  |  | |  | |      /     |   __|  ".yellow
-        puts "   \\    /    |  | |  `----.    |  |     |  `--'  | |  | |  |\\  \\----.|  |____ ".yellow
-        puts "    \\__/     |__|  \\______|    |__|      \\______/  |__| | _| `._____||_______|".yellow
+        puts "____    ____  __    ______ .___________.  ______    __  .______       _______ ".center(70).yellow
+        puts "\\   \\  /   / |  |  /      ||           | /  __  \\  |  | |   _  \\     |   ____|".center(70).yellow
+        puts " \\   \\/   /  |  | |  ,----'`---|  |----`|  |  |  | |  | |  |_)  |    |  |__   ".center(70).yellow 
+        puts "  \\      /   |  | |  |         |  |     |  |  |  | |  | |      /     |   __|  ".center(70).yellow
+        puts "   \\    /    |  | |  `----.    |  |     |  `--'  | |  | |  |\\  \\----.|  |____ ".center(70).yellow
+        puts "    \\__/     |__|  \\______|    |__|      \\______/  |__| | _| `._____||_______|".center(70).yellow
         puts
         puts "Félicitation #{player.player_name}".center(70).blue
         return true
       elsif (@grid["B1"].include?(" ") == false) && @grid["B1"] == @grid["B2"] && @grid["B1"] == @grid["B3"]
         puts 
-        puts "____    ____  __    ______ .___________.  ______    __  .______       _______ ".yellow
-        puts "\\   \\  /   / |  |  /      ||           | /  __  \\  |  | |   _  \\     |   ____|".yellow
-        puts " \\   \\/   /  |  | |  ,----'`---|  |----`|  |  |  | |  | |  |_)  |    |  |__   ".yellow
-        puts "  \\      /   |  | |  |         |  |     |  |  |  | |  | |      /     |   __|  ".yellow
-        puts "   \\    /    |  | |  `----.    |  |     |  `--'  | |  | |  |\\  \\----.|  |____ ".yellow
-        puts "    \\__/     |__|  \\______|    |__|      \\______/  |__| | _| `._____||_______|".yellow
+        puts "____    ____  __    ______ .___________.  ______    __  .______       _______ ".center(70).yellow
+        puts "\\   \\  /   / |  |  /      ||           | /  __  \\  |  | |   _  \\     |   ____|".center(70).yellow
+        puts " \\   \\/   /  |  | |  ,----'`---|  |----`|  |  |  | |  | |  |_)  |    |  |__   ".center(70).yellow
+        puts "  \\      /   |  | |  |         |  |     |  |  |  | |  | |      /     |   __|  ".center(70).yellow
+        puts "   \\    /    |  | |  `----.    |  |     |  `--'  | |  | |  |\\  \\----.|  |____ ".center(70).yellow
+        puts "    \\__/     |__|  \\______|    |__|      \\______/  |__| | _| `._____||_______|".center(70).yellow
         puts
         puts "Félicitation #{player.player_name}".center(70).blue
         return true
       elsif (@grid["C1"].include?(" ") == false) && @grid["C1"] == @grid["C2"] && @grid["C1"] == @grid["C3"]
         puts 
-        puts "____    ____  __    ______ .___________.  ______    __  .______       _______ ".yellow
-        puts "\\   \\  /   / |  |  /      ||           | /  __  \\  |  | |   _  \\     |   ____|".yellow
-        puts " \\   \\/   /  |  | |  ,----'`---|  |----`|  |  |  | |  | |  |_)  |    |  |__   ".yellow
-        puts "  \\      /   |  | |  |         |  |     |  |  |  | |  | |      /     |   __|  ".yellow
-        puts "   \\    /    |  | |  `----.    |  |     |  `--'  | |  | |  |\\  \\----.|  |____ ".yellow
-        puts "    \\__/     |__|  \\______|    |__|      \\______/  |__| | _| `._____||_______|".yellow
+        puts "____    ____  __    ______ .___________.  ______    __  .______       _______ ".center(70).yellow
+        puts "\\   \\  /   / |  |  /      ||           | /  __  \\  |  | |   _  \\     |   ____|".center(70).yellow
+        puts " \\   \\/   /  |  | |  ,----'`---|  |----`|  |  |  | |  | |  |_)  |    |  |__   ".center(70).yellow
+        puts "  \\      /   |  | |  |         |  |     |  |  |  | |  | |      /     |   __|  ".center(70).yellow
+        puts "   \\    /    |  | |  `----.    |  |     |  `--'  | |  | |  |\\  \\----.|  |____ ".center(70).yellow
+        puts "    \\__/     |__|  \\______|    |__|      \\______/  |__| | _| `._____||_______|".center(70).yellow
         puts
         puts "Félicitation #{player.player_name}".center(70).blue
         return true
       elsif (@grid["A1"].include?(" ") == false) && @grid["A1"] == @grid["B1"] && @grid["A1"] == @grid["C1"]
         puts 
-        puts "____    ____  __    ______ .___________.  ______    __  .______       _______ ".yellow
-        puts "\\   \\  /   / |  |  /      ||           | /  __  \\  |  | |   _  \\     |   ____|".yellow
-        puts " \\   \\/   /  |  | |  ,----'`---|  |----`|  |  |  | |  | |  |_)  |    |  |__   ".yellow
-        puts "  \\      /   |  | |  |         |  |     |  |  |  | |  | |      /     |   __|  ".yellow
-        puts "   \\    /    |  | |  `----.    |  |     |  `--'  | |  | |  |\\  \\----.|  |____ ".yellow
-        puts "    \\__/     |__|  \\______|    |__|      \\______/  |__| | _| `._____||_______|".yellow
+        puts "____    ____  __    ______ .___________.  ______    __  .______       _______ ".center(70).yellow
+        puts "\\   \\  /   / |  |  /      ||           | /  __  \\  |  | |   _  \\     |   ____|".center(70).yellow
+        puts " \\   \\/   /  |  | |  ,----'`---|  |----`|  |  |  | |  | |  |_)  |    |  |__   ".center(70).yellow
+        puts "  \\      /   |  | |  |         |  |     |  |  |  | |  | |      /     |   __|  ".center(70).yellow
+        puts "   \\    /    |  | |  `----.    |  |     |  `--'  | |  | |  |\\  \\----.|  |____ ".center(70).yellow
+        puts "    \\__/     |__|  \\______|    |__|      \\______/  |__| | _| `._____||_______|".center(70).yellow
         puts
         puts "Félicitation #{player.player_name}".center(70).blue
         return true
       elsif (@grid["A2"].include?(" ") == false) && @grid["A2"] == @grid["B2"] && @grid["A2"] == @grid["C2"]
         puts 
-        puts "____    ____  __    ______ .___________.  ______    __  .______       _______ ".yellow
-        puts "\\   \\  /   / |  |  /      ||           | /  __  \\  |  | |   _  \\     |   ____|".yellow
-        puts " \\   \\/   /  |  | |  ,----'`---|  |----`|  |  |  | |  | |  |_)  |    |  |__   ".yellow
-        puts "  \\      /   |  | |  |         |  |     |  |  |  | |  | |      /     |   __|  ".yellow
-        puts "   \\    /    |  | |  `----.    |  |     |  `--'  | |  | |  |\\  \\----.|  |____ ".yellow
-        puts "    \\__/     |__|  \\______|    |__|      \\______/  |__| | _| `._____||_______|".yellow
+        puts "____    ____  __    ______ .___________.  ______    __  .______       _______ ".center(70).yellow
+        puts "\\   \\  /   / |  |  /      ||           | /  __  \\  |  | |   _  \\     |   ____|".center(70).yellow
+        puts " \\   \\/   /  |  | |  ,----'`---|  |----`|  |  |  | |  | |  |_)  |    |  |__   ".center(70).yellow
+        puts "  \\      /   |  | |  |         |  |     |  |  |  | |  | |      /     |   __|  ".center(70).yellow
+        puts "   \\    /    |  | |  `----.    |  |     |  `--'  | |  | |  |\\  \\----.|  |____ ".center(70).yellow
+        puts "    \\__/     |__|  \\______|    |__|      \\______/  |__| | _| `._____||_______|".center(70).yellow
         puts
         puts "Félicitation #{player.player_name}".center(70).blue
         return true
       elsif (@grid["A3"].include?(" ") == false) && @grid["A3"] == @grid["B3"] && @grid["A3"] == @grid["C3"]
         puts 
-        puts "____    ____  __    ______ .___________.  ______    __  .______       _______ ".yellow
-        puts "\\   \\  /   / |  |  /      ||           | /  __  \\  |  | |   _  \\     |   ____|".yellow
-        puts " \\   \\/   /  |  | |  ,----'`---|  |----`|  |  |  | |  | |  |_)  |    |  |__   ".yellow
-        puts "  \\      /   |  | |  |         |  |     |  |  |  | |  | |      /     |   __|  ".yellow
-        puts "   \\    /    |  | |  `----.    |  |     |  `--'  | |  | |  |\\  \\----.|  |____ ".yellow
-        puts "    \\__/     |__|  \\______|    |__|      \\______/  |__| | _| `._____||_______|".yellow
+        puts "____    ____  __    ______ .___________.  ______    __  .______       _______ ".center(70).yellow
+        puts "\\   \\  /   / |  |  /      ||           | /  __  \\  |  | |   _  \\     |   ____|".center(70).yellow
+        puts " \\   \\/   /  |  | |  ,----'`---|  |----`|  |  |  | |  | |  |_)  |    |  |__   ".center(70).yellow
+        puts "  \\      /   |  | |  |         |  |     |  |  |  | |  | |      /     |   __|  ".center(70).yellow
+        puts "   \\    /    |  | |  `----.    |  |     |  `--'  | |  | |  |\\  \\----.|  |____ ".center(70).yellow
+        puts "    \\__/     |__|  \\______|    |__|      \\______/  |__| | _| `._____||_______|".center(70).yellow
         puts
         puts "Félicitation #{player.player_name}".center(70).blue
         return true
       elsif (@grid["A3"].include?(" ") == false) && @grid["C1"] == @grid["B2"] && @grid["B2"] == @grid["A3"]
         puts 
-        puts "____    ____  __    ______ .___________.  ______    __  .______       _______ ".yellow
-        puts "\\   \\  /   / |  |  /      ||           | /  __  \\  |  | |   _  \\     |   ____|".yellow
-        puts " \\   \\/   /  |  | |  ,----'`---|  |----`|  |  |  | |  | |  |_)  |    |  |__   ".yellow
-        puts "  \\      /   |  | |  |         |  |     |  |  |  | |  | |      /     |   __|  ".yellow
-        puts "   \\    /    |  | |  `----.    |  |     |  `--'  | |  | |  |\\  \\----.|  |____ ".yellow
-        puts "    \\__/     |__|  \\______|    |__|      \\______/  |__| | _| `._____||_______|".yellow
+        puts "____    ____  __    ______ .___________.  ______    __  .______       _______ ".center(70).yellow
+        puts "\\   \\  /   / |  |  /      ||           | /  __  \\  |  | |   _  \\     |   ____|".center(70).yellow
+        puts " \\   \\/   /  |  | |  ,----'`---|  |----`|  |  |  | |  | |  |_)  |    |  |__   ".center(70).yellow
+        puts "  \\      /   |  | |  |         |  |     |  |  |  | |  | |      /     |   __|  ".center(70).yellow
+        puts "   \\    /    |  | |  `----.    |  |     |  `--'  | |  | |  |\\  \\----.|  |____ ".center(70).yellow
+        puts "    \\__/     |__|  \\______|    |__|      \\______/  |__| | _| `._____||_______|".center(70).yellow
         puts
         puts "Félicitation #{player.player_name}".center(70).blue
         return true
       elsif (@grid["A1"].include?(" ") == false) && @grid["A1"] == @grid["B2"] && @grid["B2"] == @grid["C3"]
         puts 
-        puts "____    ____  __    ______ .___________.  ______    __  .______       _______ ".yellow
-        puts "\\   \\  /   / |  |  /      ||           | /  __  \\  |  | |   _  \\     |   ____|".yellow
-        puts " \\   \\/   /  |  | |  ,----'`---|  |----`|  |  |  | |  | |  |_)  |    |  |__   ".yellow
-        puts "  \\      /   |  | |  |         |  |     |  |  |  | |  | |      /     |   __|  ".yellow
-        puts "   \\    /    |  | |  `----.    |  |     |  `--'  | |  | |  |\\  \\----.|  |____ ".yellow
-        puts "    \\__/     |__|  \\______|    |__|      \\______/  |__| | _| `._____||_______|".yellow
+        puts "____    ____  __    ______ .___________.  ______    __  .______       _______ ".center(70).yellow
+        puts "\\   \\  /   / |  |  /      ||           | /  __  \\  |  | |   _  \\     |   ____|".center(70).yellow
+        puts " \\   \\/   /  |  | |  ,----'`---|  |----`|  |  |  | |  | |  |_)  |    |  |__   ".center(70).yellow
+        puts "  \\      /   |  | |  |         |  |     |  |  |  | |  | |      /     |   __|  ".center(70).yellow
+        puts "   \\    /    |  | |  `----.    |  |     |  `--'  | |  | |  |\\  \\----.|  |____ ".center(70).yellow
+        puts "    \\__/     |__|  \\______|    |__|      \\______/  |__| | _| `._____||_______|".center(70).yellow
         puts
         puts "Félicitation #{player.player_name}".center(70).blue
         return true
